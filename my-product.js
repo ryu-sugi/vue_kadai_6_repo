@@ -36,4 +36,15 @@ var myComponent = {
 };
   // 子コンポーネント リスト7 ↑
 
+  // 子コンポーネントにpropsオプションを追加 リスト10 ↓
+Vue.component('my-product3',{
+  template: `
+  <div>
+    <span>{{name}}</span> : <span>{{price}}(円)</span>
+  </div>`,
+  props: ['name', 'price']
+});
+  // 子コンポーネントにpropsオプションを追加 リスト10 ↑
+
+
 
