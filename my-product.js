@@ -12,7 +12,10 @@
 
   // ↓正しい構文(要素を単一のタグで囲む)
 Vue.component('my-product', {
-  template: '<div><span>{{name}}</span>:<span>{{price}}円</span></div>',
+  template: `
+    <div>
+      <span>{{name}}</span>:<span>{{price}}円</span>
+    </div>`,
   data: function() {
     return {
       name: 'スマホケース', // 商品名
@@ -21,3 +24,4 @@ Vue.component('my-product', {
   }
 });
   // ↑正しい構文
+
