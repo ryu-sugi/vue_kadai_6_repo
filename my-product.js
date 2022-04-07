@@ -25,3 +25,15 @@ Vue.component('my-product', {
 });
   // ↑正しい構文
 
+  // 子コンポーネント リスト7 ↓
+var myComponent = {
+  template: '<p>{{message}}</p>',
+  data: function() {
+    return {
+      message: 'コンポーネントです。'
+    }
+  }
+};
+  // 子コンポーネント リスト7 ↑
+
+
