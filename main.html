@@ -29,6 +29,18 @@
     <my-product3 name="スマホケースB" price="1580"></my-product3>  
   </div>
 
+  <!-- 親のテンプレート リスト14 -->
+  <div id="app3">
+    <!-- データバインドで親の「name」と「price」を子に渡す -->
+    <my-product3 v-bind:name="name" v-bind:price="price"></my-product3>
+  </div>
+
+  <!-- 親のテンプレート リスト17 -->
+  <div id="app4">
+    <!-- (4)子に「child-click」イベントが発生したら親の「priceDown」を呼び出す -->
+    <my-product v-on:child-click="priceDown" v-bind:price="price"></my-product>
+  </div>
+
   <script src="https://jp.vuejs.org/js/vue.js"></script>
   <script src="show-hello.js"></script>
   <script src="my-product.js"></script>
