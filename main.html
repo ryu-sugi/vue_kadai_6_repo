@@ -7,7 +7,7 @@
   <title>vueKadai6</title>
 </head>
 <body>
-  <div id="app0">
+  <!-- <div id="app0">
     <p>↓ここにコンポーネントが入ります。</p>
     <show-hello></show-hello>
     <my-product></my-product>
@@ -38,8 +38,21 @@
   <!-- 親のテンプレート リスト17 -->
   <div id="app4">
     <!-- (4)子に「child-click」イベントが発生したら親の「priceDown」を呼び出す -->
-    <my-product v-on:child-click="priceDown" v-bind:price="price"></my-product>
+    <my-product4 v-on:child-click="priceDown" v-bind:price="price"></my-product4>
   </div>
+
+    <!-- 親のテンプレート リスト20の出力 -->
+    <div id="app5">
+      <!-- (4)子に「child-click」イベントが発生したら親の「priceDown」を呼び出す -->
+      <my-product5 v-on:child-click="priceDown" v-bind:price="price"></my-product5>
+    </div> -->
+
+    <!-- リスト23 -->
+    <div>
+       <!-- (1)子コンポーネントをクリックすると親の「priceDown」が呼び出される  -->
+       <my-product6 v-on:click.native="priceDown" v-bind:price="price"></my-product6>
+    </div>
+
 
   <script src="https://jp.vuejs.org/js/vue.js"></script>
   <script src="show-hello.js"></script>

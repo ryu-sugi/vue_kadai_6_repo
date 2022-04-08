@@ -1,9 +1,9 @@
-  // リスト1
+// リスト1
 var app = new Vue ({
   el: '#app0'
 });
 
-  // 親コンポーネント
+// 親コンポーネント
 var app = new Vue  ({
   el: '#app',
   components: {
@@ -12,7 +12,7 @@ var app = new Vue  ({
   }
 });
 
-  //  親コンポーネント リスト13
+//  親コンポーネント リスト13
 var app3 = new Vue({
   el: '#app3',
   data: {
@@ -21,6 +21,7 @@ var app3 = new Vue({
   }
 });
 
+// 親コンポーネント リスト18
 var app4 = new Vue({
   el: '#app4',
   data: {
@@ -32,5 +33,41 @@ var app4 = new Vue({
       this.price -= 100;
     }
   }
-})
+});
 
+// 親コンポーネント リスト20
+var app5 = new Vue ({
+  el: '#app5',
+  data: {
+    price: 980
+  },
+  methods: {
+    // (5)子から呼び出されるメソッド
+    priceDown: function(discount) {
+      // 値下げ幅が指定されていない場合は100円とする
+      if(discount == undefined) discount = 100;
+      // 値下げする
+      this.price -= discount;
+    }
+  }
+});
+
+// リスト24
+var app6 = new Vue ({
+  el: '#app6',
+  data: {
+    price: 980
+  },
+  methods: {
+    // (2)子をクリックすると呼び出されるメソッド
+    priceDown: function() {
+      var discount = 0;
+      if (this.price - 50 < 500) {
+        // 例) 現在の価格が530円の場合、値下げ幅は30円
+        discount = this.price - 50;
+      }
+      // 値下げする
+      this.price -= discount;
+    }
+  }
+});
