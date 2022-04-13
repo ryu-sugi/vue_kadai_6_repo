@@ -94,3 +94,9 @@ Vue.component('my-product6',{
   template: '<button>現在の価格{{price}}(円)</button>',
   props: ['price']
 });
+
+// 子コンポーネント リスト26
+Vue.component('my-product7',{
+  template: '<li>{{id}} {{name}} {{price}}(円)</li>',
+  props: ['id', 'name', 'price']
+});

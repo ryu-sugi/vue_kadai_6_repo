@@ -53,6 +53,17 @@
        <my-product6 v-on:click.native="priceDown" v-bind:price="price"></my-product6>
     </div>
 
+    <!-- 親のテンプレート リスト27 -->
+    <div id="app7">
+      <!-- 子コンポーネントのテンプレートで配列データを描画する -->
+      <ul>
+        <my-product7 v-for="item in products"
+                     v-bind="item"
+                     v-bind::key="item.id">
+        </my-product7>
+      </ul>
+    </div>
+
 
   <script src="https://jp.vuejs.org/js/vue.js"></script>
   <script src="show-hello.js"></script>
