@@ -100,3 +100,9 @@ Vue.component('my-product7',{
   template: '<li>{{id}} {{name}} {{price}}(円)</li>',
   props: ['id', 'name', 'price']
 });
+
+// 子コンポーネント リスト26復習
+Vue.component('my-product8',{
+  template: '<li>{{id}} {{name}} {{price}}(円)</li>',
+  props: ['id', 'name', 'price']
+});

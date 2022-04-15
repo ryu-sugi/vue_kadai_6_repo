@@ -64,6 +64,18 @@
       </ul>
     </div>
 
+    <!-- 親のテンプレート リスト27復習 -->
+    <div id="app8">
+      <!-- 子コンポーネントのテンプレートで配列データを描画する -->
+      <ul>
+        <my-product8 v-for="item in products"
+                      v-bind="item"
+                      v-bind::key="item.id">
+        </my-product8>
+      </ul>
+    </div>
+
+
 
   <script src="https://jp.vuejs.org/js/vue.js"></script>
   <script src="show-hello.js"></script>
